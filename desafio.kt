@@ -3,8 +3,7 @@
 enum class Nivel { BASICO, INTERMEDIARIO, AVANCADO }
 
 data class Usuario (val nome: String) {
-    usuario = nome
-}
+    val usuario = nome
 	
 
 data class ConteudoEducacional(val nome: String, var duracao: Int = 60, val nivel: Nivel){
