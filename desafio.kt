@@ -1,20 +1,17 @@
 // [Template no Kotlin Playground](https://pl.kotl.in/WcteahpyN)
-enum class Nivel { BASICO, INTERMEDIARIO, AVANCADO }
 
+enum class Nivel { BASICO, INTERMEDIARIO, AVANCADO }
 
 data class Usuario (val name: String)
 
 
-
-
-data class ConteudoEducacional(var nome: String, val duracao: Int = 60)
+data class ConteudoEducacional(var nome: String, val duracao: Int)
 
 
 data class Formacao(val nome: String, val conteudos: List<ConteudoEducacional>, val nivel: Nivel) {
 
     val inscritos = mutableListOf<Usuario>()
 
-    
 
     fun matricular(vararg usuario: Usuario) {
         //TODO("Utilize o parâmetro $usuario para simular uma matrícula (usar a lista de $inscritos).")
@@ -26,19 +23,20 @@ data class Formacao(val nome: String, val conteudos: List<ConteudoEducacional>, 
 
 fun main() {
  
-    //TODO("Analise as classes modeladas para este domínio de aplicação e pense em formas de evoluí-las.")
-    //TODO("Simule alguns cenários de teste. Para isso, crie alguns objetos usando as classes em questão.")
+    /*TODO("Analise as classes modeladas para este domínio de aplicação e pense em formas de evoluí-las.")
+    TODO("Simule alguns cenários de teste. Para isso, crie alguns objetos usando as classes em questão.")
+    */
 
     val kotlin = listOf(
         ConteudoEducacional("Conhecendo a linguagem Kotlin", 200),
-        ConteudoEducacional("Programaçaõ Orientada a Objetos em Kotlin", 240),
+        ConteudoEducacional("Programação Orientada a Objetos em Kotlin", 240),
         ConteudoEducacional("Exercícios Kotlin", 120)
     )
 
     val java = listOf(
         ConteudoEducacional("Conhecendo a linguagem Java", 240),
-        ConteudoEducacional("Programaçaõ Orientada a Objetos em Java", 300 ),
-        ConteudoEducacional("desafios Java", 180)
+        ConteudoEducacional("Programação Orientada a Objetos em Java", 300 ),
+        ConteudoEducacional("Desafios em Java", 180)
     )
 
     val aluno1 = Usuario("Bárbara Lima")
